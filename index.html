@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lena Schulz – Webdesign</title>
+
+<style>
+
+/* RESET – entfernt weißen Rand */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+
+.abschnitt1 {
+    background-color: rgb(236, 232, 232);
+    padding: 100px 20px 80px 20px;
+    text-align: center;
+}
+
+.abschnitt1 h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.abschnitt1 h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.abschnitt1 h3 {
+    font-weight: normal;
+}
+
+/* TITLE LINE */
+
+.title-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 60px 20px 40px 20px;
+}
+
+.title-line span {
+    flex: 1;
+    height: 2px;
+    background-color: rgb(166, 162, 162);
+}
+
+.title-line h2 {
+    white-space: nowrap;
+    font-size: 24px;
+}
+
+/* ÜBER MICH */
+
+.bild {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px 80px 40px;
+    align-items: center;
+}
+
+.bild img {
+    width: 40%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text {
+    width: 60%;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* ANGEBOTE */
+
+.angebote {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px 100px 40px;
+    flex-wrap: wrap;
+}
+
+.angebote img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .bild {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bild img {
+        width: 80%;
+        height: auto;
+    }
+
+    .text {
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .angebote {
+        padding: 0 20px 60px 20px;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Lena Schulz</div>
+    <div class="nav-links">
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#angebot">Mein Angebot</a>
+    </div>
+</nav>
+
+<section class="abschnitt1">
+    <h1>Individuelle One-Page-Websites</h1>
+    <h2>Für kleine Betriebe und Selbstständige</h2>
+    <h3>Kein Baukasten, kein KI-Einheitsbrei – sondern sauberes HTML & CSS</h3>
+</section>
+
+<section id="ueber-mich">
+
+    <div class="title-line">
+        <span></span>
+        <h2>Über mich</h2>
+        <span></span>
+    </div>
+
+    <div class="bild">
+        <img src="png/lena-profil.jpg" alt="Profilbild von Lena Schulz">
+
+        <div class="text">
+            <p>
+            Ich bin Lena Schulz, 20 Jahre alt und studiere Mediendesign.
+            Schon während meines Studiums habe ich gemerkt, dass mich besonders das Thema Webdesign begeistert.
+            In meiner Freizeit spezialisiere ich mich deshalb immer mehr auf die Gestaltung und Umsetzung moderner Websites.
+            Mir ist wichtig, dass Websites nicht nur gut aussehen, sondern auch übersichtlich, verständlich und benutzerfreundlich sind.
+            Besonders kleine Unternehmen und Selbstständige möchte ich dabei unterstützen, einen professionellen Auftritt im Internet
+            zu bekommen – ohne komplizierte Technik und ohne unnötigen Schnickschnack.
+            Ich arbeite mit HTML und CSS und erstelle individuelle One-Page-Websites, die genau zu dir und deinem Angebot passen.
+            Klar strukturiert, modern gestaltet und auf das Wesentliche fokussiert.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="angebot">
+
+    <div class="title-line">
+        <span></span>
+        <h2>Mein Angebot</h2>
+        <span></span>
+    </div>
+
+    <div class="angebote">
+        <img src="png/karte1.png" alt="Angebot 1">
+        <img src="png/karte2.png" alt="Angebot 2">
+    </div>
+
+</section>
+
+</body>
+</html>
